@@ -6,7 +6,7 @@ blobs={{}, {}}
 
 function _init()
 	cls()
---	rect(0,0,127,127,7)
+	rect(0,0,127,127,7)
 	createblobs()
 end
 
@@ -33,19 +33,19 @@ function create_blob(x,y,max,r,color)
 end
 
 function createblobs()
-	for i=1,8 do
-		blobs[i]={}
-		for j=1,8 do
-			blobs[i][j]={}
-			blobs[i][j]=create_blob(i*16-8,j*16-8,8,2,3)
+	for li=1,8 do
+		blobs[li]={}
+		for col=1,8 do
+			blobs[li][col]={}
+			blobs[li][col]=create_blob(li*16-8,col*16-8,8,2,3)
 		end
 	end
 end
 
 function drawblobs()
-	for i=1,8 do
-		for j=1,8 do
-			blobs[i][j].draw()
+	for li=1,8 do
+		for col=1,8 do
+			blobs[li][col].draw()
 		end
 	end
 end
@@ -344,4 +344,3 @@ __music__
 00 41424344
 00 41424344
 00 41424344
-
